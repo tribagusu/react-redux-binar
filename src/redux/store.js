@@ -1,7 +1,7 @@
 import { createStore } from "redux"
 
 const authState = {
-  auth: {
+  data: {
     name: "My Name",
     avatar: "https://reqres.in/img/faces/2-image.jpg",
   },

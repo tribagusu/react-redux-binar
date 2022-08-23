@@ -1,14 +1,34 @@
-import React from "react"
-import { useSelector } from "react-redux"
+import React, { Component } from "react"
+import { useSelector, connect } from "react-redux"
 
-const CardName = () => {
-  const reduxData = useSelector((state) => state)
-  // console.log("  🔸-> reduxData", reduxData.auth)
-  return (
-    <div>
-      <h1>{reduxData.auth.name}</h1>
-    </div>
-  )
+// const CardName = () => {
+//   const { data } = useSelector((state) => state)
+
+//   return (
+//     <div>
+//       <h1>{data.name}</h1>
+//     </div>
+//   )
+// }
+
+// export default CardName
+
+class CardName extends Component {
+  render() {
+    const { data } = this.props
+
+    return (
+      <div>
+        <h1>{data.name}</h1>
+      </div>
+    )
+  }
 }
 
-export default CardName
+const mapStateToProps = (state) => {
+  return {
+    data: state.data,
+  }
+}
+
+export default connect(mapStateToProps)(CardName)
