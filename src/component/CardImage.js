@@ -1,11 +1,14 @@
-import React from "react";
+import React from "react"
+import { useSelector } from "react-redux"
 
-const CardImage = ({ data }) => {
+const CardImage = () => {
+  const reduxData = useSelector((state) => state)
+
   return (
     <div>
-      <img src={data.avatar} alt="" />
+      <img src={reduxData.auth.avatar} alt="" />
     </div>
-  );
-};
+  )
+}
 
-export default CardImage;
+export default CardImage

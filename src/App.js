@@ -1,6 +1,6 @@
-import "./App.css";
-import Card from "./component/Card";
-import Navbar from "./component/Navbar";
+import "./App.css"
+import Card from "./component/Card"
+import Navbar from "./component/Navbar"
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Card />
       </div>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

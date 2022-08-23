@@ -1,11 +1,14 @@
-import React from "react";
+import React from "react"
+import { useSelector } from "react-redux"
 
-const CardName = ({ data }) => {
+const CardName = () => {
+  const reduxData = useSelector((state) => state)
+  // console.log("  🔸-> reduxData", reduxData.auth)
   return (
     <div>
-      <h1>{data.name}</h1>
+      <h1>{reduxData.auth.name}</h1>
     </div>
-  );
-};
+  )
+}
 
-export default CardName;
+export default CardName
